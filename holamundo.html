@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Hola Mundo</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación flotante -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="main.html" class="navbar-brand">🚀 Guía de Instalación</a>
+            <div class="navbar-links">
+                <a href="main.html">Inicio</a>
+                <a href="windows.html">Windows</a>
+                <a href="linux.html">Linux</a>
+                <a href="dart.html">Dart/Flutter</a>
+                <a href="emuladores.html">Emuladores</a>
+                <a href="errores.html">Errores</a>
+                <a href="holamundo.html" class="active">Hola Mundo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Primer Proyecto en Flutter</h1>
+        <p>Estructura de código base para verificar que todo tu entorno compile correctamente.</p>
+    </header>
+
+    <main>
+        <section id="codigo-ejemplo">
+            <h2>Código Base: main.dart</h2>
+            <p>Reemplaza todo el contenido de tu archivo <code>lib/main.dart</code> en Visual Studio Code con el siguiente bloque de código:</p>
+            
+            <pre><code>import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MiApp());
+}
+
+class MiApp extends StatelessWidget {
+  const MiApp({super.html});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: Text(
+            '¡Hola Mundo equipo D 180!',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre>
+        </section>
+
+        <section id="ejecucion">
+            <h2>¿Cómo ejecutar el ejemplo?</h2>
+            <ol>
+                <li>Asegúrate de tener un emulador encendido (revisa la sección de Emuladores si no sabes cómo).</li>
+                <li>Presiona la tecla <kbd>F5</kbd> en tu teclado o ve a la pestaña superior <code>Run > Start Debugging</code>.</li>
+                <li>El código se compilará y verás el mensaje centrado en la pantalla de tu dispositivo virtual.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Equipo D180</p>
+    </footer>
+
+</body>
+</html>

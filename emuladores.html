@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Emuladores</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación flotante -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="main.html" class="navbar-brand">🚀 Guía de Instalación</a>
+            <div class="navbar-links">
+                <a href="main.html">Inicio</a>
+                <a href="windows.html">Windows</a>
+                <a href="linux.html">Linux</a>
+                <a href="dart.html">Dart/Flutter</a>
+                <a href="emuladores.html" class="active">Emuladores</a>
+                <a href="errores.html">Errores</a>
+                <a href="holamundo.html">Hola Mundo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Configuración de Emuladores</h1>
+        <p>Prepara tus dispositivos virtuales para probar tus aplicaciones móviles.</p>
+    </header>
+
+    <main>
+        <!-- SECCIÓN ANDROID -->
+        <section id="emulador-android">
+            <h2>1. Android Emulator (Windows / Linux / macOS)</h2>
+            <p>Para probar aplicaciones Android de manera local, necesitas configurar un dispositivo virtual (AVD) a través de Android Studio.</p>
+            
+            <div class="alerta alerta-warning">
+                <strong>Requisito de Hardware:</strong> Asegúrate de tener activada la <strong>Virtualización (VT-x / AMD-V)</strong> en la BIOS de tu computadora; de lo contrario, el emulador irá extremadamente lento o no abrirá.
+            </div>
+
+            <h3 style="margin-top: 15px;">Pasos de configuración:</h3>
+            <ol style="margin-top: 10px;">
+                <li>Descarga e instala <a href="https://android.com" target="_blank" style="color: var(--color-principal);">Android Studio</a>.</li>
+                <li>Abre el programa y dirígete a <strong>More Actions > Virtual Device Manager</strong>.</li>
+                <li>Haz clic en <strong>Create Device</strong> y selecciona un modelo de teléfono (por ejemplo, <em>Pixel 7</em>).</li>
+                <li>Descarga la imagen del sistema recomendada (ej. <em>Android 13 / API 33</em>) y haz clic en <strong>Next</strong>.</li>
+                <li>Asigna un nombre a tu emulador y presiona <strong>Finish</strong>. ¡Ya puedes iniciarlo con el botón de "Play"!</li>
+            </ol>
+        </section>
+
+        <!-- SECCIÓN IOS -->
+        <section id="emulador-ios">
+            <h2>2. Simulador de iOS (Exclusivo macOS)</h2>
+            <p>Debido a las restricciones del ecosistema de Apple, la emulación y desarrollo de iOS solo se puede realizar en computadoras Mac.</p>
+
+            <div class="alerta alerta-info">
+                <strong>Nota:</strong> El simulador de iOS consume significativamente menos recursos de memoria RAM que el emulador de Android.
+            </div>
+
+            <h3 style="margin-top: 15px;">Pasos de configuración:</h3>
+            <ol style="margin-top: 10px;">
+                <li>Abre la App Store en tu Mac e instala <strong>Xcode</strong>.</li>
+                <li>Una vez instalado, abre la Terminal de macOS y ejecuta el siguiente comando para instalar las herramientas de línea de comandos:</li>
+                <pre><code>xcode-select --install</code></pre>
+                <li>Abre Xcode, ve a las preferencias del programa (<strong>Settings > Platforms</strong>) y asegúrate de tener descargado el paquete de iOS más reciente.</li>
+                <li>Para abrir el simulador directamente desde la consola, ejecuta:</li>
+                <pre><code>open -a Simulator</code></pre>
+            </ol>
+        </section>
+
+        <!-- INTEGRACIÓN CON VS CODE -->
+        <section id="lanzamiento-vscode">
+            <h2>3. Lanzar emuladores desde VS Code</h2>
+            <p>No necesitas abrir Android Studio o Xcode cada vez que programes. Desde Visual Studio Code puedes controlarlos:</p>
+            <ol>
+                <li>En la barra inferior derecha de VS Code, busca un texto que dice <strong>No Device</strong> o muestra un dispositivo actual.</li>
+                <li>Haz clic sobre él; se desplegará una lista con tus emuladores configurados en la parte superior central.</li>
+                <li>Selecciona el emulador deseado y se encenderá automáticamente en tu pantalla.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Equipo D180</p>
+    </footer>
+
+</body>
+</html>

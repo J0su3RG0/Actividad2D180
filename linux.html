@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación en Linux</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+       <!-- Barra de navegación flotante -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="main.html" class="navbar-brand">🚀 Guía de Instalación</a>
+            <div class="navbar-links">
+                <a href="main.html">Inicio</a>
+                <a href="windows.html">Windows</a>
+                <a href="linux.html" class="active">Linux</a>
+                <a href="dart.html">Dart/Flutter</a>
+                <a href="emuladores.html">Emuladores</a>
+                <a href="errores.html">Errores</a>
+                <a href="holamundo.html">Hola Mundo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Guía de Instalación: Linux</h1>
+        <p>Instrucciones detalladas para distribuciones basadas en Ubuntu, Debian, Fedora y Arch.</p>
+        <!-- Menú de navegación rápida -->
+        <nav style="margin-top: 20px;">
+            <a href="main.html" style="color: var(--color-principal); text-decoration: none; font-weight: bold;">&larr; Volver al inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="requisitos-linux">
+            <h2>1. Requisitos previos</h2>
+            <ul>
+                <li>Acceso a la terminal con permisos de <code>sudo</code></li>
+                <li>Conexión activa a Internet</li>
+                <li>Administrador de paquetes (apt, dnf o pacman) instalado</li>
+            </ul>
+        </section>
+
+        <section id="pasos-linux">
+            <h2>2. Instalación por comandos</h2>
+            <p>Abre tu terminal (Ctrl + Alt + T) y ejecuta los comandos correspondientes a tu distribución:</p>
+            
+            <h3 style="margin-top: 15px;">Ubuntu / Debian</h3>
+            <pre><code>sudo apt update && sudo apt install nombre-del-paquete</code></pre>
+
+            <h3 style="margin-top: 15px;">Fedora / RHEL</h3>
+            <pre><code>sudo dnf install nombre-del-paquete</code></pre>
+
+            <h3 style="margin-top: 15px;">Arch Linux</h3>
+            <pre><code>sudo pacman -S nombre-del-paquete</code></pre>
+        </section>
+
+        <section id="verificacion">
+            <h2>3. Verificar la instalación</h2>
+            <p>Una vez terminado el proceso, comprueba que el programa funciona correctamente con el siguiente comando:</p>
+            <pre><code>nombre-del-paquete --version</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Equipo D180</p>
+    </footer>
+
+</body>
+</html>

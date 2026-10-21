@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución de Problemas</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación flotante -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="main.html" class="navbar-brand">🚀 Guía de Instalación</a>
+            <div class="navbar-links">
+                <a href="main.html">Inicio</a>
+                <a href="windows.html">Windows</a>
+                <a href="linux.html">Linux</a>
+                <a href="dart.html">Dart/Flutter</a>
+                <a href="emuladores.html">Emuladores</a>
+                <a href="errores.html" class="active">Errores</a>
+                <a href="holamundo.html">Hola Mundo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Solución de Problemas</h1>
+        <p>Soluciones rápidas a los errores más comunes durante la configuración de Flutter.</p>
+    </header>
+
+    <main>
+        <section id="error-doctor">
+            <h2>1. Flutter doctor encuentra problemas (X)</h2>
+            <p>Si al ejecutar el comando aparecen cruces rojas en apartados como Android toolchain o Chrome, por lo general se debe a licencias faltantes.</p>
+            <div class="alerta alerta-warning">
+                <strong>Solución:</strong> Abre tu terminal o consola y ejecuta el siguiente comando para aceptar de forma masiva todas las licencias del SDK de Android:
+            </div>
+            <pre><code>flutter doctor --android-licenses</code></pre>
+            <p style="margin-top: 10px;">Presiona <kbd>y</kbd> (yes) a cada pantalla que aparezca en la consola.</p>
+        </section>
+
+        <section id="error-cmdline">
+            <h2>2. Error: "Android toolchain - develop for Android devices... cmdline-tools component is missing"</h2>
+            <p>Este error ocurre porque Android Studio no instala las herramientas de línea de comandos por defecto.</p>
+            <ol>
+                <li>Abre <strong>Android Studio</strong>.</li>
+                <li>Ve a <strong>Tools > SDK Manager</strong> (o Settings > Languages & Frameworks > Android SDK).</li>
+                <li>Haz clic en la pestaña <strong>SDK Tools</strong>.</li>
+                <li>Busca y marca la casilla de <strong>Android SDK Command-line Tools (latest)</strong>.</li>
+                <li>Haz clic en <strong>Apply</strong> y espera a que termine la descarga.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Equipo D180</p>
+    </footer>
+
+</body>
+</html>
