@@ -64,6 +64,28 @@ section h2 {
     padding-bottom: 8px;
 }
 
+h3 {
+    text-align: center;                         /* Centrar el texto */
+    color:#212529;                            /* Color del texto */
+    margin-top: 20px;                           /* Espaciados entre titulos */
+}
+
+/* Centrar imagenes dentro de las secciones */
+.contenedor-imagen {
+    display: flex;                              /* Usar flexbox para centrar */
+    justify-content: center;                    /* Centrar horizontalmente */
+    align-items: center;                        /* Centrar verticalmente */
+    width: 100%;                                /* La imagen ocupara el 100% del ancho del contenedor*/
+    margin: 20px 0;                             /* Espaciado superior e inferior */
+}
+/* Asegurarse de que la imagen no se desborde del contenedor */
+.contenedor-imagen img {
+    max-width: 100%;                            /* La imagen no excederá el ancho del contenedor */
+    height: auto;                               /* Proporcion automatica de la imagen */
+    border-radius: 8px;                         /* Estilo de bordes redondeados */
+}
+
+
 /* ==========================================================================
    3. ELEMENTOS DE TEXTO Y LISTAS
    ========================================================================== */
@@ -172,3 +194,4 @@ body {
     border-color: #0284c7;        /* Azul */
     color: #0369a1;
 }
+
