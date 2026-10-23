@@ -24,8 +24,9 @@
     </nav>
 
     <header>
-        <h1>Guía de Instalación: [Flutter Equipo D180]</h1>
-        <p>Sigue estos pasos sencillos para completar la instalación en tu equipo.</p>
+        <h1>Guía de Instalación: Flutter </h1>
+        <h1>[Equipo D180]</h1>
+        <p>Guía de instalación de Flutter + Visual Studio Code</p>
     </header>
       <nav style="margin-top: 20px;">
             <span>Otras plataformas: </span>
@@ -34,29 +35,276 @@
         </nav>
 
     <main>
-        <section id="requisitos">
-            <h2>1. Requisitos previos</h2>
-            <ul>
-                <li>Sistema operativo compatible (Windows, Mac o Linux)</li>
-                <li>Espacio libre en disco: 500 MB</li>
-                <li>Permisos de administrador</li>
-            </ul>
+        <!--Sección de introducción-->
+        <!--Justificación del Framework Flutter-->
+        <section id="introduccion">
+            <h2>Kit de desarrollo de software y framework Flutter</h2>
+            <p>Flutter es un kit de desarrollo de software (SDK por sus siglas en inglés) de código abierto 
+                creado y mantenido por Google. Permite crear aplicaciones multiplataforma con una sola base 
+                de código. Es decir, con un solo código podemos desarrollar para Android, iOS, web, Windows, 
+                macOS y Linux.<br><br>
+                Utiliza un lenguaje de programación propio llamado Dart, también desarrollado por Google y 
+                optimizado para la creación de interfaces de usuario. Tiene una sintaxis similar a Java o C# 
+                (C Sharp).<br><br>
+                Entre sus funciones más interesantes está <strong>Hot Reload</strong>, que permite ver cómo los cambios en el código 
+                cambian de forma casi instantánea la aplicación en la que se está trabajando.<br><br>
+                La interfaz de Flutter está compuesta por widgets (botones, textos, filas, columnas), 
+                lo que facilita diseñar interfaces visuales.<br><br>
+                El compilador de Flutter compila directamente a código máquina (ARM o Intel), 
+                lo que se traduce en un rendimiento fluido similar al de las aplicaciones 
+                nativas tradicionales.<br><br>
+            </p>
         </section>
 
         <section id="pasos">
-            <h2>2. Pasos para instalar</h2>
-            <ol>
-                <li>Descarga el archivo de instalación desde el sitio oficial.</li>
-                <li>Ejecuta el archivo descargado con doble clic.</li>
-                <li>Acepta los términos y condiciones de uso.</li>
-                <li>Selecciona la carpeta de destino y haz clic en <strong>Instalar</strong>.</li>
-            </ol>
+            <!--Sección de Objetivos-->
+            <h2>Objetivos</h2>
+            <p>Siguendo este tutorial podrás instalar Flutter y configurarlo para trabajar con el editor de código Visual Studio Code.<br><br></p>
+            <ul>
+                <li>Cumplir con los requisitos previos a la instalación de Flutter</li>
+                <li>Instalar Flutter.</li>
+                <li>Ejecutar por primera vez Flutter.</li>
+                <li>Configurar el entorno de desarrollo.</li>
+                <li>Crear una pequeña aplicación de prueba en Visual Studio Code con Flutter..</li>
+            </ul>
         </section>
 
-        <section id="comandos">
-            <h2>3. Instalación por consola (Opcional)</h2>
-            <p>Si prefieres usar la terminal, ejecuta el siguiente comando:</p>
-            <pre><code>npm install nombre-del-paquete</code></pre>
+        <section id="requisitos">
+            <h2>Requisitos previos</h2>
+            <!-- Requisitos de hardware-->
+            <h3>Requisitos de hardware</h3>
+            <p>Flutter pide requisitos mínimos en hardware para funcionar:<br><br></p>
+            <ul>
+                <li>Procesador: CPU de 64 bits (Intel o AMD).</li>
+                <li>Memoria RAM: 4 GB; se recomiendan 8 GB.</li>
+                <li>Espacio en disco: Ocupa 2.5 GB, pero esto es solo la herramienta; necesita entre 5 y 10 GB para utilizarla con Android Studio o VS Code.</li>
+            </ul>
+            <b>Nota:</b> Flutter no es compatible con sistemas operativos de 32 bits, por lo que no funcionará en computadoras antiguas.<br><br>
+            <!-- Requisitos de software-->
+            <h3>Requisitos de software</h3>
+            <p>
+                Flutter requiere JDK (Java Development Kit) versión 16 o superior, que contiene las herramientas necesarias para escribir, compilar, 
+                depurar y crear aplicaciones en el lenguaje de programación Java. También requiere las herramientas JRE (Entorno de Ejecución de Java) y JVM 
+                (Máquina Virtual de Java), que ya vienen incluidas en la instalación del kit de desarrollo de Java.<br><br>
+                Si se va a instalar en un SO Windows, se requiere también PowerShell 5.1 (viene por default en equipos con Windows 11).<br><br>
+                Flutter también requiere Git, un sistema de control de versiones que permite a los desarrolladores colaborar<br><br>
+                Flutter también requiere un editor de código para escribir y ejecutar el código fuente. Se recomienda Visual Code.<br><br>
+            </p>
+            <!-- Requisitos del entorno de desarrollo -->
+            <h3>Requisitos del entorno de desarrollo</h3>
+            <p>
+                Flutter debe trabajar de la mano con Visual Studio Code o con Android Studio.<br><br>
+                Dependiendo de si se van a desarrollar aplicaciones nativas para Windows, se requiere trabajar con Visual Studio; aquí se utilizará la versión Community. 
+                Si se desea desarrollar aplicaciones móviles para Android, se necesita instalar Android Studio. Debe incluir las herramientas Android SDK y Android SDK Command-line 
+                Tools. También puede ser necesario configurar un entorno virtual si se va a trabajar con un emulador de dispositivo Android en vez de usar un teléfono físico.<br><br>
+                <b>Nota:</b> Para desarrollar aplicaciones para iOS, se requiere un equipo con macOS y Xcode.<br><br>
+            </p>
+        </section>
+        <section id="instalacion">
+            <!-- Sección de instalación -->
+            <h2>Instalación en Linux</h2>
+            <h3>Paquetes necesarios</h3>
+            <p>Previo a la instalación de Flutter en Linux, asegúrese de tener instalados los siguientes paquetes:</p>
+            <br>
+            <ul>
+                <li><code>curl</code></li>
+                <li><code>git</code></li>
+                <li><code>unzip</code></li>
+                <li><code>xz-utils</code></li>
+                <li><code>zip</code></li>
+                <li><code>libglu1-mesa</code></li>
+                <li><code>clang</code></li>
+                <li><code>cmake</code></li>
+                <li><code>ninja-build</code></li>
+                <li><code>pkg-config</code></li>
+                <li><code>libgtk-3-dev</code></li>
+                <li><code>libstdc++-12-dev</code></li>
+            </ul>
+            <br>
+            <p>En sistemas operativos basados en Debian, los paquetes pueden instalarse utilizando <code>apt-get</code>:</p>
+            <!-- Nota: pre respeta espacios y saltos de línea, se cambio esto en las hojas de estilo -->
+            <pre><code>$ sudo apt-get update -y && sudo apt-get upgrade -y
+$ sudo apt-get install curl git unzip xz-utils zip libglu1-mesa
+$ sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev libstdc++-12-dev<!-- El largo del comando hace que se parta en dos en la pagina web (dividir el comando?)--></code></pre>
+            <br>
+            <p>
+                Los paquetes con los que ya cuente Debian instalados no deberían preocuparnos. Aquellos que no estaban instalados deberían 
+                instalarse sin problemas; en caso de que alguno de los paquetes no se pueda instalar, se deberá leer el log de errores que muestra 
+                la terminal para determinar cuál es la causa, que puede ser un conflicto de paquetes.</p>
+            <br>
+            <h3>Instalar JRE/JDK en Linux</h3>
+            <p>
+                Si vamos a desarrollar para Android, también es necesario instalar los paquetes JRE (Java Runtime Environment), 
+                que es el entorno de ejecución. Este incluye una máquina virtual de Java (JVM), que es donde se ejecuta el código.
+                <br><br>
+                También se debe instalar el kit de desarrollo de Java (JDK). Este kit contiene lo necesario para programar, compilar y 
+                crear software en Java. Contiene todo lo que tiene el paquete JRE, más el conjunto de herramientas para desarrollo, como el 
+                compilador (javac) y el depurador de paquetes (jdb). Por lo que solo es necesario instalar JDK.
+                <br><br>
+                Para instalar JDK en Linux, es necesario actualizar los repositorios y luego instalar la versión predeterminada del JDK, como se muestra a continuación.
+                <br><br>
+                En una terminal, ejecute los siguientes comandos:
+                <!-- Odio la indentación de pre D: -->
+                <pre><code># Instalar JDK default que incluye JRE
+$ sudo apt update
+$ sudo apt install default-jdk
+
+# Opcionalmente, se puede elegir qué versión de JDK se quiere instalar con:
+$ sudo apt install openjdk-21-jdk
+# Donde el número puede ser reemplazado por la versión a utilizar
+
+# Comprobar que se ha instalado correctamente
+# Ver la versión de Java
+$ java --version
+$ javac --version
+</code></pre>
+            <br>
+            Si la instalación ha salido correctamente, se mostrará algo como se ve en la siguiente imagen:
+            <div class="contenedor-imagen">
+                <!-- Imagen de comprobación de instalación correcta de Java en Linux-->
+                 <!-- No olvidar usar paths relativos para las imágenes -->
+                <img src="/imagenes/linux/JavaJavac.png" alt="Comprobación de la versión de Java">
+            </div>
+            </p>
+            <br>
+            <h3>Instalar Visual Studio Code</h3>
+            <p>
+                En este tutorial se configurará Flutter para funcionar con Visual Studio Code en Linux.<br>
+                La instalación de Visual Studio Code se puede realizar siguiendo estos pasos:<br><br>
+                1. Descargar el paquete .deb desde la página oficial de Visual Studio Code: <a href="https://code.visualstudio.com/Download" target="_blank">https://code.visualstudio.com/Download</a><br>
+                2. Abrir una terminal y navegar hasta la carpeta donde se descargó el archivo .deb.<br>
+                3. Ejecutar el siguiente comando para instalar Visual Studio Code:<br>
+                <pre><code>$ sudo apt install ./<file>.deb
+# Donde <file>.deb es el paquete que hemos descargado
+# En caso de que de érror porque le falten dependencias, ejecutar:
+$ sudo apt-get install -f # Esto instalará las dependencias faltantes y completará la instalación de Visual Studio Code
+</code></pre><br>
+                El paquete de instalación, además de instalar Visual Studio Code, añadirá al repositorio <b>apt</b> las llaves de seguridad para 
+                descargar las actualizaciones.
+            </p>
+            <h3>Instalar y configurar Flutter</h3>
+            <p>
+               Flutter debe ser instalado y luego configurado para trabajar con el editor de código elegido; en este tutorial será 
+               Visual Studio Code. En cambio, si se elige Android Studio, su configuración será diferente, ya que este último es un IDE completo.
+               <br><br>
+               <b>Pasos a seguir</b>
+               <ol>
+                <li>Abrir Visual Studio Code: Abrir el editor de código Visual Studio Code.</li>
+                <li>Instalar la extensión de Flutter: Ir a la pestaña de extensiones y buscar "Flutter" para instalarla. Se debe elegir 
+                    la extensión oficial de Flutter, la que venga que el desarrollador sea "Dart Code".</li>
+                <li>Instalar Fluter en Visual Studio Code: Abrir la paleta de comandos de VS Code; es la barra de búsqueda que está hasta arriba. 
+                    Ya sea en Ir a <b>Ver > Paleta de comandos</b> o con la combinación de teclas <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>. 
+                    Escribir en la paleta de comandos <code>flutter</code> y seleccionar <code>Flutter: Nuevo proyecto.</code></li>
+               </ol>
+                <div class="contenedor-imagen">
+                <!-- Imagen de la extensión Flutter en Visual Studio Code -->
+                <img src="/imagenes/linux/ExtensionFlutter.jpg" alt="Extensión Flutter en Visual Studio Code">
+                </div>
+                <b>Nota:</b> La extensión de Flutter instalará automáticamente la extensión de Dart, que es el lenguaje de programación que utiliza Flutter.
+                En la paleta de comandos debemos escribir <code>flutter</code> y seleccionar <code>Flutter: Nuevo proyecto</code>.<br><br>
+                Esto iniciará el proceso de instalación de Flutter en Visual Studio Code. Se nos pedirá elegir un nombre para el proyecto y una ubicación para guardarlo.
+                En esta ubicación se crearán los archivos del proyecto. Se recomienda tener almenos 100 MB de espacio libre.<br><br>
+                <div class="contenedor-imagen">
+                <!-- Imagen de Crear Nuevo Proyecto Flutter -->
+                <img src="/imagenes/linux/CrearNuevoProyectoFlutter.jpg" alt="Crear Nuevo Proyecto Flutter en Visual Studio Code">
+                </div>
+                <br><br>
+                4. Si es la primera vez que se crea un proyecto con Flutter, la misma herramienta nos indicará que primero debe descargar (o localizar) 
+                    una versión SDK para Flutter.  Hay que hacer clic en Descargar SDK.<br><br>
+                5. Pedirá que elijamos una carpeta donde descargar Flutter SDK. Podemos asignarle una carpeta donde ya tengamos un proyecto o 
+                    crear una nueva para este propósito.<br><br>
+                6. Dar clic en Clonar Flutter.<br><br>
+                Dependiendo de la velocidad de nuestra conexión a internet, esto podría tardar unos minutos. Cuando termine de descargar, iniciará el 
+                proceso de inicializar Flutter SDK.
+                <div class="contenedor-imagen">
+                <!-- Imagen de Instalación SDK de Flutter-->
+                <img src="/imagenes/linux/InstalacionSDKFlutter.jpg" alt="Instalación SDK de Flutter en Visual Studio Code">
+                </div>
+                <b>Nota:</b> En la fuente que se consultó para hacer este tutorial (Flutter Docs), menciona que el proceso puede bloquearse, 
+                por lo que es necesario darle en cancelar y volver a intentarlo. Aquí no hubo necesidad de hacer eso.<br><br>
+                7. Añadir variables de entorno: <b>Add SDK to PATH</b>. Durante la instalación de Flutter SDK,  VS Code nos mostrará notificación de 
+                si queremos añadir Flutter SDK a nuestras variables de entorno. Debemos dar clic en ADD. Esto nos mostrará una notificación de que se 
+                ha añadido Flutter SDK a nuestras variables de entorno.<br><br>
+                Podemos comprobar que la instalación se hizo correctamente mediante los siguientes comandos en la terminal:
+                <pre><code># Verificar versión de Flutter y Dart
+# Verificar versión de Flutter
+$ flutter --version
+# Verificar versión de Dart
+$ dart --version</code></pre>
+                <br>
+                El SDK de Dart contiene las librerías y herramientas de comandos necesarias para trabajar con el desarrollo de aplicaciones web o la 
+                gestión de servicios. Al instalar Flutter, Dart viene incluido por defecto. Aunque se puede instalar de forma independiente.
+                <br><br>
+                Puede que durante la instalación aparezca una notificación de Google Analytics que deberemos aceptar o rechazar; no afecta al funcionamiento de Flutter.
+                <br>
+                8. Reiniciar todo. La documentación de Fluttter recomienda cerrar y volver a abrir Visual Studio Code; no esta de más reiniciar también la consola.<br><br>
+                9. <b>Opcional</b>, pero tal vez necesario. Ejecutar el comando <code>flutter doctor -v</code>, el cual hará un diagnóstico de si nuestra instalación 
+                de Flutter está correcta o tenemos algún problema, como la ausencia de un paquete o que no se han añadido las variables de entorno.
+                <pre><code># Comprobar instalación de Flutter
+$ flutter doctor -v</code></pre><br><br>
+                Si la salida de el comando pasado arroja algún error o falla, deberá corregirse primero y luego volver a ejecutar el comando para comprobar de nuevo.
+            </p>
+        </section>
+        <section id="Primera aplicación">
+            <h2>Crear una aplicación de prueba "Hola, Mundo!"</h2>
+            <p>
+                Como ejemplo de prueba, Flutter tiene una aplicación ya creada que se puede elegir si se quiere que se pueda ejecutar en varios entornos 
+                como Android, iOS, Linux, macOS, Windows, web.<br><br>
+                En Visual Studio Code, primero hacemos <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> para abrir nuestra paleta de comandos y elegimos crear un nuevo 
+                proyecto con Flutter, en este caso una aplicación. Si elegimos una aplicación en blanco, Flutter nos entregará solo la carcasa; para 
+                esta primera prueba elegiremos una aplicación que pueda ser probada y ejecutada, además de que añade comentarios descriptivos.<br><br>
+                <div class="contenedor-imagen">
+                <!-- Imagen de aplicación de prueba en Flutter-->
+                <img src="/imagenes/linux/AplicacionPruebaFlutter.jpg" alt="Aplicación de prueba en Flutter en Visual Studio Code">
+                </div>
+                <br>
+                Elegimos un nombre para nuestro proyecto y una ubicación para guardarlo. Flutter hará el resto.
+                <div class="contenedor-imagen">
+                <!-- Imagen nombre de nuestra aplicación de prueba en Flutter -->
+                <img src="/imagenes/linux/NombreAplicacionPrueba.jpg" alt="Nombre de la aplicación de prueba en Flutter">
+                </div>
+                <br>
+                A continuación, Flutter nos preguntará sobre qué plataformas queremos ejecutar el proyecto. Cabe aclarar que, si elegimos todas las 
+                plataformas, el proyecto será más pesado. Sin embargo, Flutter ordena el proyecto de manera que cada carpeta puede extraerse en 
+                cualquier momento para ejecutarse en uno u otro entorno.
+                <div class="contenedor-imagen">
+                <!-- Imagen selección de nuestra aplicación de prueba en Flutter -->
+                <img src="/imagenes/linux/SeleccionPlataformasAplicacion.jpg" alt="Selección de las plataformas de la aplicación de prueba en Flutter">
+                </div>
+                <br><br>
+                Flutter entonces descargará todo lo necesario para crear la aplicación. Iconos, imágenes, estilos de letra, herramientas para 
+                depuración y parches del SDK que no estén instalados. Además, creará todo el conjunto de carpetas y archivos de configuración 
+                necesarios (como el gitignore o el archivo de configuración de módulo IDE de JetBrains). Al final, y si todo salió bien, nos 
+                debería indicar que podemos ejecutar nuestra aplicación con el comando <code>flutter run</code>.
+                <div class="contenedor-imagen">
+                <!-- Imagen confirmación de que se creo la aplicación correctamente -->
+                <img src="/imagenes/linux/ConfirmacionAplicacionPrueba.jpg" alt="Confirmación de la creación de la aplicación de prueba en Flutter">
+                </div>
+                <br><br>
+                Se puede añadir como parámetro el entorno de ejecución de nuestra aplicación. En sistemas Linux se añade la opción <code>-d linux</code>.
+                <div class="contenedor-imagen">
+                <!-- Imagen ejecución de la aplicación de prueba en Flutter -->
+                <img src="/imagenes/linux/EjecucionAplicacionPruebaFlutter.jpg" alt="Ejecución de la aplicación de prueba en Flutter">
+                </div>
+                <br><br>
+                Si todo salió bien, se debería abrir una ventana con nuestra aplicación de prueba. En este caso, la aplicación es un contador que
+                incrementa un número cada vez que se presiona un botón. La aplicación tiene un contador que inicia en cero y cada vez que se presiona.
+                <br><br>
+                Para modificar un poco nuestra primera aplicación, hemos de ir, dentro de la estructura de archivos que componen la aplicación, al 
+                archivo “lib/main.dart”, donde está la aplicación principal. Flutter creó una aplicación probada y añadió comentarios en el código, 
+                por lo que es muy intuitivo modificarla lo suficiente como para que haga nuestro hola mundo modificando unas pocas líneas.
+                <br><br>
+                En el archivo “lib/main.dart”, se puede modificar el texto que se muestra en la pantalla. Por ejemplo, podemos cambiar el texto que dice 
+                “You have pushed the button this many times:” por “Hola, Mundo!”, como se muestra en la siguiente imagen:
+                <div class="contenedor-imagen">
+                <!-- Imagen modificando el código de la aplicación. Cambiamos el título de la aplicación y el mensaje de You pushed the button -->
+                <img src="/imagenes/linux/ModificandoCodigo.jpg" alt="Modificación del código de la aplicación de prueba en Flutter">
+                </div>
+                <br><br>
+                Como resultado podemos ver que ahora la aplicación muestra el identificador de nuestro equipo, D180, junto al mensaje de "Hola, Mundo!".
+                Además, ahora el contador añade puntos extra al grupo entero.<br><br>
+                <h4>Aquí finalizaría nuestro tutorial, gracias.</h4><br>
+            </p>
         </section>
     </main>
 
